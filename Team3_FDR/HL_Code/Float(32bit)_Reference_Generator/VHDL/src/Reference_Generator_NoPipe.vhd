@@ -1,0 +1,71 @@
+
+--Engineer     : Dingxin Jin
+--Date         : 11/05/2018
+--Name of file : Reference_Generator.vhd
+--Description  : Generate reference files of floating point arithmetic with different operands without pipeline
+
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use ieee.math_real.all;
+library floatfixlib;
+use floatfixlib.fixed_float_types.all;
+use floatfixlib.fixed_pkg.all;
+use floatfixlib.float_pkg.all;
+
+
+
+
+entity Reference_Generator_NoPipe is
+  port (
+        -- input side
+        clk, rst      : in  std_logic;
+        next_in       : out std_logic;      
+        in_valid      : in  std_logic;  
+	data_in_1     : in  std_logic_vector(31 downto 0);
+        data_in_2     : in  std_logic_vector(31 downto 0);
+
+        -- output side
+	next_out      : in  std_logic;
+        out_valid     : out std_logic;
+        data_out      : out std_logic_vector(31 downto 0)
+       );
+end Reference_Generator_NoPipe;
+-- DO NOT MODIFY PORT NAMES ABOVE
+
+architecture arch of Reference_Generator_NoPipe is
+  -- ********************** DEFINE SIGNALS ********************
+  signal data_reg   : std_logic_vector(31 downto 0);
+  signal data_valid : std_logic;
+  signal data_stall : std_logic;
+begin
+  -- -------------- Stages -----------------
+  -- array need to be assigned in one process
+  stages: process(clk)
+  begin
+    if (rising_edge(clk)) then
+      if (rst = '1') then
+          data_valid <= '0';
+      else
+        if (data_stall = '0') then
+          data_valid <= in_valid;
+          if (in_valid = '1') then
+            data_reg <= to_slv(to_float(data_in_1) + to_float(data_in_2)); -- Change the Operand Here
+          end if;
+        end if;
+      end if;
+    end if;
+  end process;
+
+  -- -------------- Stall Signals  -----------------
+  Handshake: process(all)
+  begin
+    next_in    <= not data_stall;
+    data_stall <= data_valid and (not next_out);
+  end process;
+
+  -- -------------- Output  -----------------
+  out_valid <= data_valid;
+  data_out  <= data_reg;
+
+end arch;

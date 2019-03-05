@@ -1,0 +1,89 @@
+
+--Engineer     : Dingxin Jin
+--Date         : 11/05/2018
+--Name of file : Reference_Generator.vhd
+--Description  : Generate reference files of floating point arithmetic with different operands
+
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use ieee.math_real.all;
+library floatfixlib;
+use floatfixlib.fixed_float_types.all;
+use floatfixlib.fixed_pkg.all;
+use floatfixlib.float_pkg.all;
+
+
+
+
+entity Reference_Generator is
+  port (
+        -- input side
+        clk, rst      : in  std_logic;
+        next_in       : out std_logic;      
+        in_valid      : in  std_logic;  
+	data_in_1     : in  std_logic_vector(31 downto 0);
+        data_in_2     : in  std_logic_vector(31 downto 0);
+
+        -- output side
+	next_out      : in  std_logic;
+        out_valid     : out std_logic;
+        data_out      : out std_logic_vector(31 downto 0)
+       );
+end Reference_Generator;
+-- DO NOT MODIFY PORT NAMES ABOVE
+
+architecture arch of Reference_Generator is
+  -- ********************** DEFINE CONSTANT *******************
+  constant Stages_Num : integer := 6; -- Change the Number of Stages Here
+  -- ********************** DEFINE TYPES **********************
+  type array8x1b_t is array (0 to 7) of std_logic;
+  type array8x8f_t is array (0 to 7) of std_logic_vector(31 downto 0);
+  -- ********************** DEFINE SIGNALS ********************
+  signal data_reg   : array8x8f_t;
+  signal data_valid : array8x1b_t;
+  signal data_stall : array8x1b_t;
+begin
+  -- -------------- Stages -----------------
+  -- array need to be assigned in one process
+  stages: process(clk)
+  begin
+    if (rising_edge(clk)) then
+      if (rst = '1') then
+        for i in 0 to (Stages_Num - 1) loop -- 7+1 stages
+            data_valid(i) <= '0';
+        end loop;
+      else
+        if (data_stall(0) = '0') then
+          data_valid(0) <= in_valid;
+          if (in_valid = '1') then
+            data_reg(0) <= to_slv(to_float(data_in_1) * to_float(data_in_2)); -- Change the Operand Here
+          end if;
+        end if;
+        for j in 1 to (Stages_Num - 1) loop -- 7+1 stages
+          if (data_stall(j) = '0') then
+            data_valid(j) <= data_valid(j-1);
+            if (data_valid(j-1) = '1') then
+              data_reg(j) <= data_reg(j-1);
+            end if;
+          end if;
+        end loop;
+      end if;
+    end if;
+  end process;
+
+  -- -------------- Stall Signals  -----------------
+  Handshake: process(all)
+  begin
+    next_in <= not data_stall(0);
+    for k in 1 to (Stages_Num - 1) loop -- 7+1 stages
+      data_stall(k-1) <= data_valid(k-1) and data_stall(k);
+    end loop;
+    data_stall(Stages_Num - 1) <= data_valid(Stages_Num - 1) and (not next_out);
+  end process;
+
+  -- -------------- Output  -----------------
+  out_valid <= data_valid(Stages_Num - 1) and next_out;
+  data_out  <= data_reg(Stages_Num - 1);
+
+end arch;
