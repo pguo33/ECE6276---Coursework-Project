@@ -1,0 +1,22 @@
+{C:/Users/Miss Guo/ECE6276/Lab/lab_4/multiplier_updated.vhd} {1 {vcom -work work -2002 -explicit -vopt -stats=none {C:/Users/Miss Guo/ECE6276/Lab/lab_4/multiplier_updated.vhd}
+Model Technology ModelSim SE-64 vcom 10.4 Compiler 2014.12 Dec  3 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity multiplier_updated
+-- Compiling architecture arch of multiplier_updated
+
+} {} {}} {C:/Users/Miss Guo/ECE6276/Lab/lab_3/tb/tb_multiplier_updated.vhd} {1 {vcom -work work -2008 -explicit -vopt -stats=none {C:/Users/Miss Guo/ECE6276/Lab/lab_3/tb/tb_multiplier_updated.vhd}
+Model Technology ModelSim SE-64 vcom 10.4 Compiler 2014.12 Dec  3 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package MATH_REAL
+-- Loading package ENV
+-- Loading package std_logic_textio
+-- Compiling entity tb_multiplier_updated
+-- Compiling architecture tb_arch of tb_multiplier_updated
+
+} {} {}}

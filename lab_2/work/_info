@@ -1,0 +1,96 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/Miss Guo/ECE6276/Lab/lab_1
+Esequence_detector
+Z0 w1536370679
+Z1 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z2 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z3 dC:/Users/Miss Guo/ECE6276/Lab/lab_2
+Z4 8C:/Users/Miss Guo/ECE6276/Lab/lab_2/sequence_detector.vhd
+Z5 FC:/Users/Miss Guo/ECE6276/Lab/lab_2/sequence_detector.vhd
+l0
+L10
+VBFLmBA<]fzR^TXYcVTEYn1
+!s100 fB<:;:Xl4=5bk]1Tc?8zb2
+Z6 OL;C;10.4;61
+32
+Z7 !s110 1536370882
+!i10b 1
+Z8 !s108 1536370882.512000
+Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/Miss Guo/ECE6276/Lab/lab_2/sequence_detector.vhd|
+Z10 !s107 C:/Users/Miss Guo/ECE6276/Lab/lab_2/sequence_detector.vhd|
+!i113 0
+Z11 o-work work -2002 -explicit
+Z12 tExplicit 1
+Aarch
+R1
+R2
+DEx4 work 17 sequence_detector 0 22 BFLmBA<]fzR^TXYcVTEYn1
+32
+R7
+l23
+L19
+VJ:TjGRPg]6S2XKTjHQc[?0
+!s100 G<jEozTQbLOPP]NQR<?2R1
+R6
+!i10b 1
+R8
+R9
+R10
+!i113 0
+R11
+R12
+Etb_seqdec
+Z13 w1536370696
+Z14 DPx4 ieee 16 std_logic_textio 0 22 V5TSK`;aJKC<l]CEg1>mz1
+Z15 DPx3 std 3 env 0 22 d?`1ck@NdeD@H3RZG7FgZ2
+Z16 DPx4 ieee 9 math_real 0 22 Sk6CSihbPL<f[^Shm]=KX0
+Z17 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+R1
+R2
+R3
+Z18 8C:/Users/Miss Guo/ECE6276/Lab/lab_2/tb_seqdec.vhd
+Z19 FC:/Users/Miss Guo/ECE6276/Lab/lab_2/tb_seqdec.vhd
+l0
+L14
+Vg9h<P5TS5=dRiN@LeSDEi0
+!s100 QVM@S1a=TiJE@8h2HU5Vc3
+R6
+32
+Z20 !s110 1536370890
+!i10b 1
+Z21 !s108 1536370890.800000
+Z22 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/Miss Guo/ECE6276/Lab/lab_2/tb_seqdec.vhd|
+Z23 !s107 C:/Users/Miss Guo/ECE6276/Lab/lab_2/tb_seqdec.vhd|
+!i113 0
+R11
+R12
+Atb_arch
+R14
+R15
+R16
+R17
+R1
+R2
+DEx4 work 9 tb_seqdec 0 22 g9h<P5TS5=dRiN@LeSDEi0
+32
+R20
+l35
+L17
+V?o:n?6G930U9TQO32bCi?2
+!s100 A9jc53zPkgZAB7m:hX]840
+R6
+!i10b 1
+R21
+R22
+R23
+!i113 0
+R11
+R12

@@ -1,0 +1,98 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/modeltech64_10.4/examples/convolution
+Emultiplier_updated
+Z0 w1537838036
+Z1 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z4 dC:/Users/Miss Guo/ECE6276/Lab/lab_4
+Z5 8C:/Users/Miss Guo/ECE6276/Lab/lab_4/multiplier_updated.vhd
+Z6 FC:/Users/Miss Guo/ECE6276/Lab/lab_4/multiplier_updated.vhd
+l0
+L11
+VT_aHgl6YUemhO]b0f[Q6>2
+!s100 1PFmoUN?Jc^QiMjNg9^H70
+Z7 OL;C;10.4;61
+32
+Z8 !s110 1537838038
+!i10b 1
+Z9 !s108 1537838038.958000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/Miss Guo/ECE6276/Lab/lab_4/multiplier_updated.vhd|
+Z11 !s107 C:/Users/Miss Guo/ECE6276/Lab/lab_4/multiplier_updated.vhd|
+!i113 0
+Z12 o-work work -2002 -explicit
+Z13 tExplicit 1
+Aarch
+R1
+R2
+R3
+DEx4 work 18 multiplier_updated 0 22 T_aHgl6YUemhO]b0f[Q6>2
+32
+R8
+l44
+L28
+V0ULz=g6lLkehJ_X6fGd8K1
+!s100 FE8X0bB=n`JEXb=DZXD421
+R7
+!i10b 1
+R9
+R10
+R11
+!i113 0
+R12
+R13
+Etb_multiplier_updated
+Z14 w1535848484
+Z15 DPx4 ieee 16 std_logic_textio 0 22 V5TSK`;aJKC<l]CEg1>mz1
+Z16 DPx3 std 3 env 0 22 d?`1ck@NdeD@H3RZG7FgZ2
+Z17 DPx4 ieee 9 math_real 0 22 Sk6CSihbPL<f[^Shm]=KX0
+R1
+R2
+R3
+R4
+Z18 8C:/Users/Miss Guo/ECE6276/Lab/lab_3/tb/tb_multiplier_updated.vhd
+Z19 FC:/Users/Miss Guo/ECE6276/Lab/lab_3/tb/tb_multiplier_updated.vhd
+l0
+L14
+V0?hEOW@ZR33717[>JhdKX2
+!s100 JJ=X3L2;=kCTi7e49JzZz1
+R7
+33
+Z20 !s110 1537827314
+!i10b 1
+Z21 !s108 1537827314.280000
+Z22 !s90 -reportprogress|300|-work|work|-2008|-explicit|-vopt|-stats=none|C:/Users/Miss Guo/ECE6276/Lab/lab_3/tb/tb_multiplier_updated.vhd|
+Z23 !s107 C:/Users/Miss Guo/ECE6276/Lab/lab_3/tb/tb_multiplier_updated.vhd|
+!i113 0
+Z24 o-work work -2008 -explicit
+R13
+Atb_arch
+R15
+R16
+R17
+R1
+R2
+R3
+DEx4 work 21 tb_multiplier_updated 0 22 0?hEOW@ZR33717[>JhdKX2
+33
+R20
+l48
+L17
+VETSl`mF>dI2948TZhdVTG0
+!s100 Wng@1U<f?i`X0R4HVcaB71
+R7
+!i10b 1
+R21
+R22
+R23
+!i113 0
+R24
+R13

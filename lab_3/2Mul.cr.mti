@@ -1,0 +1,35 @@
+{C:/Users/Miss Guo/ECE6276/Lab/lab_3/tb/tb_multiplier_updated.vhd} {0 {vcom -work work -2002 -explicit -vopt -stats=none {C:/Users/Miss Guo/ECE6276/Lab/lab_3/tb/tb_multiplier_updated.vhd}
+Model Technology ModelSim SE-64 vcom 10.4 Compiler 2014.12 Dec  3 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package MATH_REAL
+-- Loading package ENV
+** Warning: C:/Users/Miss Guo/ECE6276/Lab/lab_3/tb/tb_multiplier_updated.vhd(10): (vcom-1516) Package "STD.ENV" does not exist in this language version.
+
+-- Loading package std_logic_textio
+-- Compiling entity tb_multiplier_updated
+-- Compiling architecture tb_arch of tb_multiplier_updated
+** Error: C:/Users/Miss Guo/ECE6276/Lab/lab_3/tb/tb_multiplier_updated.vhd(128): No feasible entries for subprogram "WRITE".
+** Error: C:/Users/Miss Guo/ECE6276/Lab/lab_3/tb/tb_multiplier_updated.vhd(130): No feasible entries for subprogram "WRITE".
+** Error: C:/Users/Miss Guo/ECE6276/Lab/lab_3/tb/tb_multiplier_updated.vhd(150): VHDL Compiler exiting
+
+} {14.0 17.0} {}} {C:/Users/Miss Guo/ECE6276/Lab/lab_3/tb/tb_multiplier.vhd} {0 {vcom -work work -2002 -explicit -vopt -stats=none {C:/Users/Miss Guo/ECE6276/Lab/lab_3/tb/tb_multiplier.vhd}
+Model Technology ModelSim SE-64 vcom 10.4 Compiler 2014.12 Dec  3 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package MATH_REAL
+-- Loading package ENV
+** Warning: C:/Users/Miss Guo/ECE6276/Lab/lab_3/tb/tb_multiplier.vhd(10): (vcom-1516) Package "STD.ENV" does not exist in this language version.
+
+-- Loading package std_logic_textio
+-- Compiling entity tb_multiplier
+-- Compiling architecture tb_arch of tb_multiplier
+** Error: C:/Users/Miss Guo/ECE6276/Lab/lab_3/tb/tb_multiplier.vhd(128): No feasible entries for subprogram "WRITE".
+** Error: C:/Users/Miss Guo/ECE6276/Lab/lab_3/tb/tb_multiplier.vhd(130): No feasible entries for subprogram "WRITE".
+** Error: C:/Users/Miss Guo/ECE6276/Lab/lab_3/tb/tb_multiplier.vhd(150): VHDL Compiler exiting
+
+} {14.0 17.0} {}}

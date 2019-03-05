@@ -1,0 +1,23 @@
+{C:/Users/Miss Guo/ECE6276/Lab/lab_2/sequence_detector.vhd} {1 {vcom -work work -2002 -explicit -vopt -stats=none {C:/Users/Miss Guo/ECE6276/Lab/lab_2/sequence_detector.vhd}
+Model Technology ModelSim SE-64 vcom 10.4 Compiler 2014.12 Dec  3 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity sequence_detector
+-- Compiling architecture arch of sequence_detector
+
+} {} {}} {C:/Users/Miss Guo/ECE6276/Lab/lab_2/tb_seqdec.vhd} {2 {vcom -work work -2002 -explicit -vopt -stats=none {C:/Users/Miss Guo/ECE6276/Lab/lab_2/tb_seqdec.vhd}
+Model Technology ModelSim SE-64 vcom 10.4 Compiler 2014.12 Dec  3 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package MATH_REAL
+-- Loading package ENV
+** Warning: C:/Users/Miss Guo/ECE6276/Lab/lab_2/tb_seqdec.vhd(10): (vcom-1516) Package "STD.ENV" does not exist in this language version.
+
+-- Loading package std_logic_textio
+-- Compiling entity tb_seqdec
+-- Compiling architecture tb_arch of tb_seqdec
+
+} {} {}}
