@@ -1,0 +1,74 @@
+--Engineer     : Peng Guo
+--Date         : 2018/9/7
+--Name of file : sequence_detector.vhd
+--Description  : implements a sequence detector 
+--               detecting "101110" using state machine
+
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity sequence_detector is
+  port (
+        clk, rst  : in  std_logic;
+        data_in   : in  std_logic;
+        data_out  : out std_logic 
+       );
+end sequence_detector;
+-- DO NOT MODIFY THE PORT NAME ABOVE
+
+architecture arch of sequence_detector is
+  type state is (s0,s1,s2,s3,s4,s5);
+  signal present_state, next_state: state;
+
+begin
+  process(rst, clk)
+    begin
+      if(rst = '1') then
+        present_state <= s0;
+      elsif (clk'event and clk = '1') then
+        present_state <= next_state;
+      end if;
+  end process
+  process(data_in, present_state)
+    begin
+      case present_state is
+        when s0 =>
+          if(data_in = '1') then
+            next_state <= s1; 
+            data_out <= '0';
+          else next_state <= s0;
+          end if;
+        when s1 =>
+          if(data_in = '0') then
+            next_state <= s2; 
+            data_out <= '0';
+          else next_state <= s1;
+          end if;
+        when s2 =>
+          if(data_in = '1') then
+            next_state <= s3; 
+            data_out <= '0';
+          else next_state <= s0;
+          end if;
+        when s3 =>
+          if(data_in = '1') then
+            next_state <= s4; 
+            data_out <= '0';
+          else next_state <= s2;
+          end if;
+        when s4 =>
+          if(data_in = '1') then
+            next_state <= s5; 
+            data_out <= '0';
+          else next_state <= s2;
+          end if;
+        when s5 =>
+          data_out <= '0';
+          if(data_in = '0') then
+            next_state <= s0; 
+            data_out <= '1';
+          else next_state <= s1;
+          end if;
+      end case;
+  end process
+end arch;
